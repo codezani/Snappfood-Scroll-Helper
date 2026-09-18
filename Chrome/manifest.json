@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Snappfood Scroll Helper",
+  "version": "1.1",
+  "description": "اسکرول بالا و پایین در اسنپ‌فود با PageUp و PageDown + نمایش جهت",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [],
+  "host_permissions": [
+    "*://snappfood.ir/*",
+    "*://*.snappfood.ir/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://snappfood.ir/*",
+        "*://*.snappfood.ir/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png"
+    },
+    "default_title": "Snappfood Scroll Helper"
+  }
+}
